@@ -1,0 +1,21 @@
+1/30/2025:  Added a feature to create, or "initialize" the map
+           
+            Added a border to the map
+                Fixed a bug where the border wouldn't be placed on the outside of the map
+
+            Added a feature to print the map to the console
+
+            Added rooms to the map
+                Fixed an issue that could cause an infinite loop when placing rooms
+                Fixed an issue where the rooms could be placed over the border
+                Changed the "inserting" condition so the rooms can't overlap each other
+
+            Added hallways, or corridors
+                Fixed a bug causing the corridors to stop where there wasn't a room
+
+2/02/2025:  Created a header file and a Map.c file to clear up the main file
+                Fixed a few issues with making sure the files recognized each other
+            Added stairs to the map
+
+2/04/2025:  Change the algorithms for the pathways slightly, now the paths moving in the X direction
+            won't be generated right next to each other.
