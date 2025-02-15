@@ -1,0 +1,15 @@
+2/12/2025   Began the program by asking for user input, either --save or --load
+
+            Made the program open the necessary directory in the user's home directory
+                Fixed issues with the program recognizing the dungeon_file in the directory
+            
+            Created new methods allowing the program to build a map from a read file
+                Fixed multiple bugs with reading incorrect bits
+            
+            Program is completely functional if loading a map
+
+2/13/2025   Modified multiple methods carried over from previous assignment to save the maps to disc
+                Fixed multiple bugs regarding converting variables from little to big-endian
+
+            Program is now able to create dungeons and save them to file
+            Added a source file for both loading and saving dungeons, makes the main file look much cleaner

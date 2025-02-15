@@ -1,5 +1,5 @@
-generate_map: Map_main.c map.c
-	gcc Map_main.c Map.c -o generate_map -Wall -Werror
+map_file: main.c map_load.c map_save.c
+	gcc main.c map_load.c map_save.c -o map_file -Wall -Werror
 
 clean:
-	rm -f generate_map *~
+	rm -f map_file dungeon_file *~

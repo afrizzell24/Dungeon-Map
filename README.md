@@ -1,15 +1,17 @@
-NOTE: All code line references are in Map.c
+*NOTE*
+In a shell, type: mkdir ~/.rlg327
+This creates a directory for the program to save and load dungeons.
 
-This program creates a map for the game. The program first creates an 21-80 array with a border, so the "playable area" 
-is really a 19-78 array (Lines 10-26). Next, the program inserts 6-8 rooms with random sizes randomly around the map (Lines 88-134).
-Throughout this method, there are multiple references to an array called pathPositions, this is an array storing random coordinates for 
-each room so corridors can be added At the end of the method.
+This program can create dungeons and save them to disc, or load dungeons from disc. The two terminal commands
+you have to input are "--save" and "--load". If you don't input exactly one of those commands, the program won't run.
+First, the program moves to the specified directory to save/load dungeons. After this, there is an 'if' statement.
 
-After inserting rooms, the corridors are added by simply connecting them from the X and Y directions. The program randomly picks
-whether it should start with the X or Y direction (Lines ).
+'option == 0' will create a dungeon and save it to disc. I've built all the functions for this in a seperate source
+file to keep main.c clean, with function names corresponding to which part of the dungeon is being saved to file.
 
-NOTE: In the moveXDirection() method, there is a disgusting chain in the if statements. I know it looks terrible. I
-added this to stop paths generating right next to each in the X direction. I left it in because it worked on the first try
-and I think it looks better. I didn't add it for the Y direction because it's much less likely to happen and it's horrible to read.
+'option == 1' loads a saved dungeon from disc, and I've put these functions in a seperate source file the same
+way I did with saving dungeons.
 
-Lastly, the program adds the stairs and displays the map on the screen.
+*NOTE*
+My program skips the first few bytes when loading a dungeon and begins at the PC's position. I didn't do this to
+cut corners, I just don't need those values to create the map. I will read them in future assignments if necessary.
